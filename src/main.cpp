@@ -22,6 +22,5 @@ int main() {
 		std::cout << sll.pop() << std::endl; // output 4, 12, 5, 3
 	}
 
-
 	return 0;
 }

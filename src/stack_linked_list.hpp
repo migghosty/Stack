@@ -1,7 +1,6 @@
 #ifndef STACK_LINKED_LIST_HPP_
 #define STACK_LINKED_LIST_HPP_
 
-
 template <typename T>
 class StackLinkedList {
 public:
@@ -22,6 +21,16 @@ private:
 public:
 	// default constructor
 	StackLinkedList() : head{nullptr}, stackSize{0} {};
+
+	// destructor
+	~StackLinkedList() {
+		while (head) {
+			Node* tmp = head;
+			head = head->next;
+			delete tmp;
+		}
+	}
+
 
 	// add, remove, and find methods
 	void push(T obj) {
