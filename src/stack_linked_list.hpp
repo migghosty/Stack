@@ -42,9 +42,11 @@ public:
 		if (!head) {
 			throw;
 		}
+		Node* toDelete = head;
 		T res = head->val;
 		head = head->next;
 		stackSize--;
+		delete toDelete;
 		return res;
 	}
 
