@@ -3,7 +3,7 @@
 
 template <typename T>
 class StackLinkedList {
-public:
+private:
 	struct Node {
 		T val;
 		Node* next;
@@ -13,8 +13,6 @@ public:
 		Node(T v, Node* n) : val{v}, next{n} {}
 
 	};
-
-private:
 	Node* head;
 	unsigned stackSize;
 
